@@ -7,3 +7,4 @@ bump
 bump
 bump
 patch
+minor
