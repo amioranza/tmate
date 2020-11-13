@@ -30,7 +30,7 @@ jobs:
 
       - name: Tag
         id: semver
-        uses: hennejg/github-tag-action@v4.1.jh1
+        uses: hennejg/github-tag-action@v4.2.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
