@@ -33,6 +33,7 @@ jobs:
         uses: hennejg/github-tag-action@v4.2.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          create_annotated_tag: true
 
       - name: Build and push
         uses: docker/build-push-action@v2
@@ -43,3 +44,4 @@ jobs:
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/tmate:latest
             ${{ steps.login-ecr.outputs.registry }}/tmate:${{ steps.semver.outputs.new_tag }}
+            ${{ steps.login-ecr.outputs.registry }}/tmate:${{ steps.semver.outputs.new_version }}
